@@ -1,0 +1,50 @@
+﻿@model List<Project.Models.JobInfo>
+   @{
+       ViewBag.Title = "Home";
+}
+@Html.Partial("~/Views/Shared/_headerlayout.cshtml");
+   <div style="margin-top:50px"></div>
+ @Html.Partial("~/Views/Shared/_slider.cshtml");
+
+<div class="container ">
+    <div class="jumbotron" style="margin:60px;">
+        <h1>Job Seekers 1st Choice</h1>
+        <p class="lead">Don't pick a job with great vacation time.Pick one that doesn't need escaping from. </p>
+        <p><a href="/Client/registerProfile" class="btn btn-primary btn-large">Register Now</a></p>
+    </div>
+</div>
+<div class="container ">
+    <div class="jumbotron " style="margin:60px;">
+        <h1>Employers 1st Needs</h1>
+        <p class="lead">            Are you planning to hire?<br>Join now, post jobs and start hiring. </p>
+        <p><a href="/Admin/Register" class="btn btn-primary btn-large">Start here</a></p>
+        
+    </div>
+
+</div>
+@*@{ int count = 4;}*@
+<div class="container ">
+  
+    @*<h1>Recent Jobs</h1>
+    <div class="row">
+        @foreach (var a in @Model)
+        {
+            if (count % 4 == 0)
+            {
+                <br />
+                <div class="row"></div>
+            }
+            <div class="col-md-4">
+                <fieldset>
+                    <p>@a.jobTitle</p>
+                    <p>@a.category</p>
+
+                    <p>@a.description</p>
+
+                    <a class="butn btn-info" href="/H">Apply Now</a>
+                </fieldset>
+            </div>
+            count++;
+            }
+        </div>*@
+</div>

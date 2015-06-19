@@ -1,0 +1,33 @@
+﻿@Html.Partial("~/Views/Shared/_headerlayout.cshtml");
+@if (Session["loginAdmin"] != null && Session["login"] != null && (int)Session["loginAdmin"] == 0 )
+{
+    
+
+<div class="col-lg-3 " style=" margin-top:170px;margin-left:20px;">
+    <div class="list-group" style="float:left;position:fixed;font-size:14px">
+
+        <a class="list-group-item  active" href="#">Categories</a>
+        @if ( (int)Session["loginAdmin"] == 1)
+        {
+
+        }
+        else if ( (int)Session["login"] == 1)
+        {
+            <a class="list-group-item" href="/Client/changeProfile">Update Profile</a>
+            <a class="list-group-item" href="/Home/allJobList">View All Posted Jobs</a>
+            <a class="list-group-item" href="/Home/searchJob">Search a Job</a>
+             <a class="list-group-item" href="/Client/getAllNotification">Notifications</a>
+        }
+        else
+        {
+
+            <a class="list-group-item" href="/Admin/PostJob">Post a Job</a>
+
+            <a class="list-group-item" href="/Home/searchJob">Relevant Jobs</a>
+        }
+
+        <a class="list-group-item" href="/Home/changePassword">Change Password</a>
+    </div>
+</div>
+}
+

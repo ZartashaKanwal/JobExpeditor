@@ -1,0 +1,61 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+@Html.Partial("~/Views/Shared/_headerlayout.cshtml");
+@if (Session["loginAdmin"] != null && (int)Session["loginAdmin"] == 1)
+{ 
+@Html.Partial("~/Views/Shared/_mentor.cshtml");
+}
+else if(Session["login"] != null && ((int)Session["login"] == 1 || (int)Session["login"] == 2))
+{
+    @Html.Partial("~/Views/Shared/_playout.cshtml");
+}
+else
+{
+    <div class="container col-lg-3">
+        
+    </div>
+}
+<div class="container col-lg-6" >
+    <h2 class="page-header" style="margin-top:120px">@ViewBag.Title</h2>
+    <h3>Job Expeditor is a revolution for Job Explorer and Employer</h3>
+    <div class="jumbotron">
+        <p class="lead" style="margin:15px;font-size:15px">
+         Job Expeditor is Pakistan's leading jobs plateform. It help jobseekers in finding
+             the jobs of their own choice, while providing a unique platform for employers
+             to advertise different career opportunities available in their organization and
+             receive resumes from the potential candidates online.
+
+            Job Expeditor is known to be a reliable place to apply online for jobs, 
+            easy to use interface, fastest browsing experience and rich features set.
+             That's the reason we are able to gain and maintain the trust of the users of our website.
+
+            Job Expeditor is a leading jobs site of Pakistan with over 23,000 employers
+             and more than 1 million active and engaged web users. High standards and special 
+            
+            concerns about consumer's privacy entitled Mustakbil.com for the seal of certification by TRUSTe - world leader
+             in consumer privacy protection.
+
+
+            Job Expeditor's development team is working for the continuous
+             improvement of the website and new features are introduced periodically to give users a more enjoyable experience.</p>
+
+           <h1 style="font-size:22px"> Who is behind Job Expeditor?</h1>
+        <p class="lead" style="margin:15px;font-size:15px">
+            Job Expeditor is an online venture of TechnoBird - a Pakistan based IT services firm. Founded in 2002, TechnoBird a complete web solutions provider with its operations based in Pakistan comes to you with the message – put your business and services on the fast track of growth with the next generation tools of information technology.
+            </p>
+            <h1 style="font-size:22px">Our Strengths</h1>
+        <p class="lead" style="margin:15px;font-size:15px">
+            Our Strength is derived from the motivation - of delivering service of a high order.
+            And working towards it, is our team - dedicated, innovative and with a keen sense of competition.
+            The team at TechnoBird is a result of the coming together of
+            qualified professionals capable of providing the best of creative intellectual
+            innovative and cost effective packages for varied requirements.
+        </p>
+    </div>
+</div>
+ @*<div class="row">
+    <div class="col-md-5">
+        <img src="Content/images/about-us.png" class="img-circle" height="200" width="300" />
+    </div>
+</div>*@

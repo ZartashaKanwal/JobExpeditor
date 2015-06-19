@@ -1,0 +1,59 @@
+﻿@model List<Project.Models.Coment>
+@{
+    ViewBag.Title = "All Job List";
+}
+
+<style type="text/css">
+    h1 {
+        margin: 30px 0;
+        padding: 0 200px 15px 0;
+        border-bottom: 1px solid #E5E5E5;
+    }
+
+    .bs-example {
+        margin: 20px;
+    }
+</style>
+@*@if (Session["loginAdmin"] != null && (int)Session["loginAdmin"] == 1)
+    {
+        @Html.Partial("~/Views/Shared/_mentor.cshtml");
+    }
+    else*@
+ if (Session["login"] != null &&  ((int)Session["loginAdmin"] == 0 && ((int)Session["login"] == 1 || (int)Session["login"] == 2))
+{
+@Html.Partial("~/Views/Shared/_headerlayout.cshtml");
+@Html.Partial("~/Views/Shared/_playout.cshtml");
+}
+else if (Session["loginAdmin"] != null && (int)Session["loginAdmin"] == 1)
+{
+@Html.Partial("~/Views/Shared/_mentor.cshtml");
+}
+else
+{
+<div class="container col-lg-3">
+
+</div>
+    }
+<h1 style=" margin-top:80px;font-family:Arial Rounded MT Bold;font:bold;">All Messages</h1>
+
+@foreach (var j in @Model)
+{
+
+    <div class="row text-center">
+        <div class="col-lg-3">
+        </div>
+        <div class=" col-lg-5">
+            <br />
+            <fieldset style="font-size:14px;border-radius:8px">
+                <div style="margin:30px">
+                    <p> <b>Contact Type : </b>@j.contactType</p>
+                    <p> <b>Email Address : </b> @j.Email</p>
+
+                    <p><b>Name :</b> @j.Name</p>
+
+                    <p><b>Message :</b> @j.</p>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+}

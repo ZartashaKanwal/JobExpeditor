@@ -1,0 +1,34 @@
+﻿@if (Session["login"] != null && (int)Session["login"] > 0)
+{
+    using (Html.BeginForm("LogOff", "Home", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right "}))
+    {
+
+
+
+
+        <p style="margin-top:12px;float:right;font-size:14px">
+            @if (Session["loginAdmin"]!=null && (int)Session["loginAdmin"] == 1)
+            {
+                    @Html.ActionLink("Hello Admin " + Session["dname"] + "!", "admin", "webAdminn", routeValues: null, htmlAttributes: new { title = "Manage" })
+
+            }
+            else  if (Session["login"]!=null && (int)Session["login"] == 1)
+            {
+                @Html.ActionLink("Hello Protege " + Session["dname"] + "!", "Index", "Client", routeValues: null, htmlAttributes: new { title = "Manage" })
+
+            }
+            else
+            {
+                @Html.ActionLink("Hello Mentor " + Session["dname"] + "!", "Welcome", "Admin", routeValues: null, htmlAttributes: new { title = "Manage" })
+
+            }
+
+            <a href="/Home/LogOff" style="margin-left:5px;float:right"><span style="margin-top:5px;margin-left:10px; font-size:20px" class="glyphicon glyphicon-log-out"></span></a></p>
+
+    }
+}
+else
+{
+        <a href="/Home/Login" style="margin-left:5px;float:right"><span style="margin-top:12px;font-size:20px" class="glyphicon glyphicon-user"></span></a>
+    
+}

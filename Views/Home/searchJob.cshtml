@@ -1,0 +1,69 @@
+﻿@{
+    ViewBag.Title = "searchJob";
+}
+@Html.Partial("~/Views/Shared/_headerlayout.cshtml");
+@if (Session["loginAdmin"] != null && (int)Session["loginAdmin"] == 1)
+{
+    @Html.Partial("~/Views/Shared/_mentor.cshtml");
+}
+else if (Session["login"] != null && ((int)Session["login"] == 1 || (int)Session["login"] == 2))
+{
+    @Html.Partial("~/Views/Shared/_playout.cshtml");
+}
+else
+{
+    <div class="col-xs-2"></div>
+}
+
+<div class="col-xs-6">
+    <h1 style="margin-top:130px;font-family:Arial Rounded MT Bold;font:bold;">Search a Relevant Job</h1>
+    <form class="form-horizontal" style="font-size:12px" enctype="multipart/form-data" action="/Home/jobList" method="post">
+        <div class="form-group">
+            <label class="control-label col-xs-3" for="jobcat">Category:</label>
+            <div class="col-xs-5">
+                <select class="form-control" name="CID">
+                    <option value="0">--Select--</option>
+                    @foreach (var a in ViewBag.categories)
+                    {
+                        <option value="@a.Id">@a.category1</option>
+                    }
+                </select>
+            </div>
+        </div>
+     
+        <div class="form-group">
+            <label class="control-label col-xs-3" for="jobcat">Salary Range:</label>
+            <div class="col-xs-4">
+                <input type="text" name="from" class="form-control col-xs-3" placeholder="From">
+            </div>
+            <div class="col-xs-4">
+                <input type="text" name="to" class="form-control col-xs-3" placeholder="To" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-xs-3" for="loc">Job Location:</label>
+            <div class="col-xs-5">
+                <select class="form-control" name="location">
+                    <option value="0">Select Location</option>
+                    <option value="Islamabad">Islamabad</option>
+                    <option value="Lahore">Lahore</option>
+                    <option value="Karachi">Karachi</option>
+                    <option value="Peshawer">Peshawer</option>
+                    <option value="Faisalabad">Faisalabad</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-xs-offset-3 col-xs-9">
+                <input type="submit" class="btn btn-primary" value="Search">
+                <input type="reset" class="btn btn-default" value="Reset">
+            </div>
+        </div>
+
+        <div style="margin-bottom:300px;"></div>
+    </form>
+</div>
+
+
+<div class="col-lg-3"><img src="/Content/images/jobsSearch.png" style="width:300px;height:300px;
+float:right;position:fixed;margin-top:200px;margin-right:100px"></div>

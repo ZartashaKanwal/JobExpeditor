@@ -1,0 +1,12 @@
+﻿@{
+    ViewBag.Title = "ValidateLogin";
+}
+@if (Session["loginAdmin"] != null && (int)Session["loginAdmin"] == 1)
+{
+    @Html.Partial("~/Views/Shared/_mentor.cshtml");
+}
+else if (Session["login"] != null && ((int)Session["login"] == 1 || (int)Session["login"] == 2))
+{
+    @Html.Partial("~/Views/Shared/_playout.cshtml");
+}
+<h2>ValidateLogin</h2>

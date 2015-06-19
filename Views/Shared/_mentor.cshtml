@@ -1,0 +1,104 @@
+﻿@if(Session["loginAdmin"]!=null && (int)Session["loginAdmin"]==1)
+{
+<div class="container col-lg-3" style="margin-top:90px;font-size:16px">
+    <h2>Admin Menu</h2>
+    <h3>Manage Employer</h3>
+<div class="row">
+    <div class="col-md-12">
+        <a href="/webAdminn/AddEmployer">Add Employer</a>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        @*<button id="employer" class="btn-link" value="/webAdminn/ShowEmployer">See All Employer</button>*@
+         <a href="/webAdminn/ShowEmployer">See All Employer</a>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <a href="/webAdminn/SearchEmployer">Search Employer</a>
+    </div>
+</div>
+
+<h3>Manage Jobs</h3>
+<div class="row">
+    <div class="col-md-12">
+        <button id="jobList" class="btn-link" value="/Home/allJobList">See All Jobs</button>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <a href="/Home/searchJob">Search Jobs</a>
+    </div>
+</div>
+<h3>Manage Employee</h3>
+<div class="row">
+    <div class="col-md-12">
+        <a href="/webAdminn/AddEmployee">Add Employee</a>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        @*<button id="employee" class="btn-link" value="/webAdminn/ShowEmployees">See All Employees</button>*@
+        <a href="/webAdminn/ShowEmployees">See All Employees</a>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+
+        <a href="/webAdminn/SearchEmployee">Search Employee</a>
+    </div>
+</div>
+<h3>Manage Admins</h3>
+<div class="row">
+    <div class="col-md-12">
+        <a href="/webAdminn/AddAdmin">Add Admin</a>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+
+        @*<button id="adminn" class="btn-link" value="/webAdminn/ShowAdmin">See All Admins</button>*@
+        <a href="/webAdminn/ShowAdmin">See All Admins</a>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <a href="/webAdminn/SearchAdmin">Search Admin</a>
+    </div>
+</div>
+
+<h3>Manage Categories</h3>
+
+
+<div class="row">
+    <div class="col-md-12">
+        <a href="/webAdminn/AddCategory">Add Category</a>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+
+        @*<button id="adminn" class="btn-link" value="/webAdminn/ShowCategory">See All Categories</button>*@
+        <a href="/webAdminn/ShowCategory">See All Categories</a>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <a href="/webAdminn/SearchCategory">Search Category</a>
+    </div>
+</div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <a href="/Home/changePassword">Change Password</a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <a href="/Home/getComment">View Messages</a>
+        </div>
+    </div>
+</div>
+}

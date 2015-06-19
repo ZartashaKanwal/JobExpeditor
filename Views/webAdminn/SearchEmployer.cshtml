@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Employer Searching";
+}
+@Html.Partial("~/Views/Shared/_headerlayout.cshtml");
+
+    @Html.Partial("~/Views/Shared/_mentor.cshtml");
+<div class="col-xs-6">
+    <h1 style="margin-top:130px;font-family:Arial Rounded MT Bold;font:bold;">Search an Employer</h1>
+    <form class="form-horizontal" style="font-size:12px" enctype="multipart/form-data" action="/webAdminn/ConformEmpSearching" method="post">
+        <div class="form-group">
+            <label class="control-label col-xs-3" for="jobcat">Display Name:</label>
+            <div class="col-xs-5">
+                <input type="text" class="form-control" id="salary" name="name" placeholder="Arfeen..." required>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-xs-offset-3 col-xs-9">
+                <input type="submit" class="btn btn-primary" value="Search">
+                <input type="reset" class="btn btn-default" value="Reset">
+            </div>
+        </div>
+
+        <div style="margin-bottom:300px;"></div>
+    </form>
+</div>
+
+
+<div class="col-lg-3">
+    <img src="/Content/images/jobsSearch.png" style="width:300px;height:300px;
+float:right;position:fixed;margin-top:100px;margin-right:80px">
+</div>

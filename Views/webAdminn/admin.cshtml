@@ -1,0 +1,44 @@
+﻿@{
+    ViewBag.Title="Admin";
+}
+@Html.Partial("~/Views/Shared/_headerlayout.cshtml");
+@Html.Partial("~/Views/Shared/_mentor.cshtml");
+<div class="col-lg-3"></div>
+
+<script>
+
+
+    $(document).ready(function () {
+        $('#employer').clicks(function () {
+            var value = $('#employer').val();
+
+            $('#innerDiv').load( value);
+        })
+    });
+    $(document).ready(function () {
+        $('#jobList').click(function () {
+            var value = $('#jobList').val();
+
+            $('#innerDiv').load(value);
+        })
+    });
+    $(document).ready(function () {
+        $('#employee').click(function () {
+            var value = $('#employee').val();
+
+            $('#innerDiv').load(value);
+        })
+    });
+    $(document).ready(function () {
+        $('#adminn').click(function () {
+            var value = $('#adminn').val();
+
+            $('#innerDiv').load( value);
+        })
+    });
+
+</script>
+
+
+
+<div  id="innerDiv"></div>

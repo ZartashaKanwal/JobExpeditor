@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "Add Category";
+}
+@Html.Partial("~/Views/Shared/_headerlayout.cshtml");
+<style type="text/css">
+    h1 {
+        margin: 30px 0;
+        padding: 0 200px 15px 0;
+        border-bottom: 1px solid #E5E5E5;
+    }
+
+    .bs-example {
+        margin: 20px;
+    }
+</style>
+
+<div class="col-lg-3">
+    <img src="/Content/images/register_now.png" style="height:300px;width:300px;
+ float:left;position:fixed;margin-top:200px;">
+</div>
+<div class="col-xs-5">
+    <h1 style="margin-top:110px; font-family:Arial Rounded MT Bold;font:bold;" class="col-xs-12">Add Category</h1>
+    <form name="form" class="form-horizontal" style="font-size:12px" method="post" action="/webAdminn/RegisterCategory">
+        <div class="form-group">
+            <label class="control-label col-xs-3" for="inputPassword">Category:</label>
+            <div class="col-xs-9">
+                <input type="text" class="form-control" name="category1" id="inputPassword" placeholder="Marketing..." required>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-xs-offset-3 col-xs-9">
+                <input type="submit" class="btn btn-primary" value="Done!">
+                <input type="reset" class="btn btn-default" value="Reset">
+            </div>
+        </div>
+    </form>
+    <br />
+</div>

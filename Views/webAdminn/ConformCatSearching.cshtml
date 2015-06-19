@@ -1,0 +1,36 @@
+﻿@model Project.Models.Category
+@{
+    ViewBag.Title = "Job Category Search";
+}
+@Html.Partial("~/Views/Shared/_headerlayout.cshtml");
+<style type="text/css">
+    h1 {
+        margin: 30px 0;
+        padding: 0 200px 15px 0;
+        border-bottom: 1px solid #E5E5E5;
+    }
+
+    .bs-example {
+        margin: 20px;
+    }
+</style>
+ @Html.Partial("~/Views/Shared/_mentor.cshtml");
+
+
+<h1 style=" margin-top:80px;font-family:Arial Rounded MT Bold;font:bold;">Category</h1>
+
+    <div class="row text-center">
+        <div class="col-lg-3">
+        </div>
+        <div class=" col-lg-5">
+            <br />
+            <fieldset style="font-size:14px;border-radius:8px">
+                <div style="margin:30px">
+                    <p> <b>Catogory : </b>@Model.category1</p>
+
+                </div>
+            </fieldset>
+            @*<ul class="pager"> <li class="previous"><a href="#">&larr; Older</a></li> <li class="next"><a href="#">Newer &rarr;</a></li> </ul>*@
+
+        </div>
+    </div>

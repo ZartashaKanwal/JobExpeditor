@@ -1,0 +1,70 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+@Html.Partial("~/Views/Shared/_headerlayout.cshtml");
+<style type="text/css">
+    h1 {
+        margin: 30px 0;
+        padding: 0 200px 15px 0;
+        border-bottom: 1px solid #E5E5E5;
+    }
+
+    .bs-example {
+        margin: 20px;
+    }
+</style>
+
+<div class="col-lg-2 " style=" margin-top:80px;margin-left:2%;"></div>
+<div class="col-xs-6">
+    
+    <form class="form-horizontal" action="/Home/sendContact">
+        <h1 style="margin-left:15px;font-family:Arial Rounded MT Bold;font:bold;margin-top:120px;">Drop Us a Line!</h1>
+
+        <p style="font-size:14px;margin-left:5px">We'd love to hear from you.</p>
+        <div class="form-group">
+            <label class="control-label col-xs-3" for="loc">Subject:</label>
+            <div class="col-xs-6">
+                <select class="form-control" name="contactType">
+                    <option>--Select--</option>
+                    <option >I have a general question....</option>
+                    <option>Complaint</option>
+                    <option>I have a query</option>
+                    <option>Others</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-xs-3" for="inputName">Display Name:</label>
+            <div class="col-xs-9">
+                <input type="text" class="form-control" name="Name" id="inputName" placeholder="Zartasha....">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-xs-3" for="inputEmail">Email:</label>
+            <div class="col-xs-9">
+                <input type="email" class="form-control" name="Email" id="inputEmail" placeholder="Email">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-xs-3" for="postalAddress">Message:</label>
+            <div class="col-xs-9">
+                <textarea rows="3" class="form-control" name="Message" id="postalAddress" placeholder="Postal Address"></textarea>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-xs-offset-3 col-xs-9">
+                <input type="submit" class="btn btn-primary" value="Send">
+                <input type="reset" class="btn btn-default" value="Reset">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-xs-offset-3 col-xs-9">
+                <p style="font-size:16px">Questions?<span style="font-size:16px;font-family: Rounded MT Bold;font:bold; color:red">Call Us:(92)000-0000</span></p>
+            </div>
+        </div>
+
+    </form>
+</div>
+<div class="col-lg-3"><img src="/Content/images/contact1.jpg" style="float:right;position:fixed;margin-top:170px"></div>
